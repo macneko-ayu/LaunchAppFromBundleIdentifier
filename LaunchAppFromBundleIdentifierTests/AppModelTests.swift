@@ -21,13 +21,14 @@ class AppModelTests: XCTestCase {
         super.tearDown()
     }
 
-    func testInitialize() {
-        let model = AppModel(displayName: "Xcode.app", bundleIdentifier: "com.apple.dt.Xcode", bundleVersion: "13532", icon: nil, filePath: "/Applications/Xcode.app")
-        XCTAssertEqual(model.displayName, "Xcode.app")
-        XCTAssertEqual(model.bundleIdentifier, "com.apple.dt.Xcode")
-        XCTAssertEqual(model.bundleVersion, "13532")
-        XCTAssertEqual(model.icon, nil)
-        XCTAssertEqual(model.filePath, "/Applications/Xcode.app")
-        XCTAssertEqual(model.isActive, false)
+    func testInitislizeFromFileUrl() {
+        let fileUrl = URL(fileURLWithPath: "/Applications/Xcode.app")
+        let model = AppModel(fileUrl: fileUrl, iconSize: NSSize(width: 120, height: 120))
+        XCTAssertEqual(model!.displayName, "Xcode.app")
+        XCTAssertEqual(model!.bundleIdentifier, "com.apple.dt.Xcode")
+        XCTAssertEqual(model!.bundleVersion, "13532")
+        XCTAssertNotNil(model!.icon)
+        XCTAssertEqual(model!.filePath, "/Applications/Xcode.app")
+        XCTAssertEqual(model!.isActive, false)
     }
 }
