@@ -23,6 +23,13 @@ class AppListViewModelTests: XCTestCase {
 
     func testInitialize() {
         let viewModel = AppListViewModel(bundleIdentifier: "com.apple.dt.xcode")
-        XCTAssertTrue(viewModel.items.count == 0)
+        XCTAssertTrue(viewModel!.items.count >= 0)
+        let model = viewModel!.items.first
+        XCTAssertEqual(model!.displayName, "Xcode.app")
+        XCTAssertEqual(model!.bundleIdentifier, "com.apple.dt.Xcode")
+        XCTAssertEqual(model!.bundleVersion, "13532")
+        XCTAssertNotNil(model!.icon)
+        XCTAssertEqual(model!.filePath, "/Applications/Xcode.app")
+        XCTAssertEqual(model!.isActive, false)
     }
 }

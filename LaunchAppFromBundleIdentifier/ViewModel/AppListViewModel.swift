@@ -9,9 +9,18 @@
 import Cocoa
 
 struct AppListViewModel {
+    static let iconSize = NSSize(width: 120, height: 120)
     var items = [AppModel]()
     
-    init(bundleIdentifier: String) {
-        
+    init?(bundleIdentifier: String) {
+        guard let applicationUrls = LSCopyApplicationURLsForBundleIdentifier(bundleIdentifier as CFString, nil)?.takeUnretainedValue() as? [URL] else {
+            return nil
+        }
+        for applicationUrl in applicationUrls {
+            guard let model = AppModel(fileUrl: applicationUrl, iconSize: AppListViewModel.iconSize) else {
+                break
+            }
+            items.append(model)
+        }
     }
 }
