@@ -22,7 +22,12 @@ class AppModelTests: XCTestCase {
     }
 
     func testInitialize() {
-        let model = AppModel()
-        XCTAssertNotNil(model)
+        let model = AppModel(displayName: "Xcode.app", bundleIdentifier: "com.apple.dt.Xcode", bundleVersion: "13532", icon: nil, filePath: "/Applications/Xcode.app")
+        XCTAssertEqual(model.displayName, "Xcode.app")
+        XCTAssertEqual(model.bundleIdentifier, "com.apple.dt.Xcode")
+        XCTAssertEqual(model.bundleVersion, "13532")
+        XCTAssertEqual(model.icon, nil)
+        XCTAssertEqual(model.filePath, "/Applications/Xcode.app")
+        XCTAssertEqual(model.isActive, false)
     }
 }

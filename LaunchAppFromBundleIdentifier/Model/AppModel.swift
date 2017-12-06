@@ -6,8 +6,21 @@
 //  Copyright © 2017年 macneko. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
 struct AppModel {
+    let displayName: String
+    let bundleIdentifier: String
+    let bundleVersion: String
+    var icon: NSImage?
+    let filePath: String
+    var isActive: Bool = false
     
+    init(displayName: String, bundleIdentifier: String, bundleVersion: String, icon: NSImage?, filePath: String) {
+        self.displayName = displayName
+        self.bundleIdentifier = bundleIdentifier
+        self.bundleVersion = bundleVersion
+        self.icon = icon
+        self.filePath = filePath
+    }
 }
