@@ -96,10 +96,11 @@
 		C77E7CCE1FD7CBB2002E3038 /* LaunchAppFromBundleIdentifier */ = {
 			isa = PBXGroup;
 			children = (
+				C77E7CFB1FD7CD87002E3038 /* ViewModel */,
+				C77E7CFC1FD7CD8F002E3038 /* Model */,
+				C77E7CFD1FD7CD9F002E3038 /* UI */,
 				C77E7CCF1FD7CBB2002E3038 /* AppDelegate.swift */,
-				C77E7CD11FD7CBB2002E3038 /* ViewController.swift */,
 				C77E7CD31FD7CBB2002E3038 /* Assets.xcassets */,
-				C77E7CD51FD7CBB2002E3038 /* Main.storyboard */,
 				C77E7CD81FD7CBB2002E3038 /* Info.plist */,
 				C77E7CD91FD7CBB2002E3038 /* LaunchAppFromBundleIdentifier.entitlements */,
 			);
@@ -122,6 +123,29 @@
 				C77E7CEF1FD7CBB2002E3038 /* Info.plist */,
 			);
 			path = LaunchAppFromBundleIdentifierUITests;
+			sourceTree = "<group>";
+		};
+		C77E7CFB1FD7CD87002E3038 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C77E7CFC1FD7CD8F002E3038 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C77E7CFD1FD7CD9F002E3038 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C77E7CD11FD7CBB2002E3038 /* ViewController.swift */,
+				C77E7CD51FD7CBB2002E3038 /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
