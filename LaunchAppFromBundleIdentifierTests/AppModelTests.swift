@@ -21,7 +21,7 @@ class AppModelTests: XCTestCase {
         super.tearDown()
     }
 
-    func testInitislizeFromFileUrl() {
+    func testInitislizeFromValidFileUrl() {
         let fileUrl = URL(fileURLWithPath: "/Applications/Xcode.app")
         let model = AppModel(fileUrl: fileUrl, iconSize: NSSize(width: 120, height: 120))
         XCTAssertEqual(model!.displayName, "Xcode.app")
@@ -30,5 +30,11 @@ class AppModelTests: XCTestCase {
         XCTAssertNotNil(model!.icon)
         XCTAssertEqual(model!.filePath, "/Applications/Xcode.app")
         XCTAssertEqual(model!.isActive, false)
+    }
+    
+    func testInitislizeFromInValidFileUrl() {
+        let fileUrl = URL(fileURLWithPath: "/hoge/hoge.app")
+        let model = AppModel(fileUrl: fileUrl, iconSize: NSSize(width: 120, height: 120))
+        XCTAssertNil(model)
     }
 }

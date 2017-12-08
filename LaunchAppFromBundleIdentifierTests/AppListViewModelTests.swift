@@ -21,7 +21,7 @@ class AppListViewModelTests: XCTestCase {
         super.tearDown()
     }
 
-    func testInitialize() {
+    func testInitializeFromValidBundleIdentifier() {
         let viewModel = AppListViewModel(bundleIdentifier: "com.apple.dt.xcode")
         XCTAssertTrue(viewModel!.items.count >= 0)
         let model = viewModel!.items.first
@@ -32,4 +32,10 @@ class AppListViewModelTests: XCTestCase {
         XCTAssertEqual(model!.filePath, "/Applications/Xcode.app")
         XCTAssertEqual(model!.isActive, false)
     }
+    
+    func testInitializeFromInValidBundleIdentifier() {
+        let viewModel = AppListViewModel(bundleIdentifier: "com.hoge.fuga")
+        XCTAssertNil(viewModel)
+    }
+
 }
