@@ -26,7 +26,7 @@ class AppModelTests: XCTestCase {
         let model = AppModel(fileUrl: fileUrl, iconSize: NSSize(width: 120, height: 120))
         XCTAssertEqual(model!.displayName, "Xcode.app")
         XCTAssertEqual(model!.bundleIdentifier, "com.apple.dt.Xcode")
-        XCTAssertEqual(model!.bundleVersion, "13532")
+        XCTAssertNotNil(model!.bundleVersion)
         XCTAssertNotNil(model!.icon)
         XCTAssertEqual(model!.filePath, "/Applications/Xcode.app")
         XCTAssertEqual(model!.isActive, false)
