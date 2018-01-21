@@ -8,23 +8,15 @@
 
 import Cocoa
 
-struct AppListViewModel {
-    // icon画像のサイズをstaticで保持
-    static let iconSize = NSSize(width: 120, height: 120)
-    var items = [AppModel]()
+class AppListViewModel {
+    var items: [AppListItems.AppListItem]
     
-    init?(bundleIdentifier: String) {
-        // BundleIdentifierにマッチするApplicationのファイルUrlを取得
-        // 同じBundleIdentifierのApplicationがインストールされている場合もあり得るので配列となる
-        guard let applicationUrls = LSCopyApplicationURLsForBundleIdentifier(bundleIdentifier as CFString, nil)?.takeUnretainedValue() as? [URL] else {
-            return nil
-        }
-        // モデルを作成
-        for applicationUrl in applicationUrls {
-            guard let model = AppModel(fileUrl: applicationUrl, iconSize: AppListViewModel.iconSize) else {
-                break
-            }
-            items.append(model)
-        }
+    init(bundleIdentifiers: [String]) {
+        self.items = AppListItems(bundleIdentifiers: bundleIdentifiers).items
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(didLaunchApplication(notification:)), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
+    }
+    
+    @objc func didLaunchApplication(notification: NSNotification)  {
+        
     }
 }
