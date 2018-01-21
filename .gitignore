@@ -1,5 +1,3 @@
-tignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
 ## Build generated
 build/
 DerivedData/
@@ -14,6 +12,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*.xcworkspace
 
 ## Other
 *.moved-aside
@@ -45,7 +44,6 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
-Podfile.lock
 
 # Carthage
 #
