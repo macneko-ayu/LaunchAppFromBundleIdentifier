@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		05DD2EA6FFF86822AEB08588 /* Pods_LaunchAppFromBundleIdentifier_LaunchAppFromBundleIdentifierUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE9F447F7B6D1ABFF8F91B5 /* Pods_LaunchAppFromBundleIdentifier_LaunchAppFromBundleIdentifierUITests.framework */; };
 		3D1A9D30C3CDC980B6B44399 /* Pods_LaunchAppFromBundleIdentifier_LaunchAppFromBundleIdentifierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01789A95AD5EC7B2B1367F09 /* Pods_LaunchAppFromBundleIdentifier_LaunchAppFromBundleIdentifierTests.framework */; };
+		5DA30C8D201636CB00A578CD /* AppListItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA30C8C201636CB00A578CD /* AppListItemCellView.swift */; };
 		6D8367B28D84B93FA436D123 /* Pods_LaunchAppFromBundleIdentifierUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBDB432660F7286BAA1D5D6 /* Pods_LaunchAppFromBundleIdentifierUITests.framework */; };
 		98B5854AD29698C0C5DEC464 /* Pods_LaunchAppFromBundleIdentifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A3894B7E68A1E9E4ABAFAE /* Pods_LaunchAppFromBundleIdentifier.framework */; };
 		9AFFDC4BCD74DD0FDD074267 /* Pods_LaunchAppFromBundleIdentifierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3037F5D2DA88FC0FE3CA37C8 /* Pods_LaunchAppFromBundleIdentifierTests.framework */; };
 		C77E7CD01FD7CBB2002E3038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E7CCF1FD7CBB2002E3038 /* AppDelegate.swift */; };
-		C77E7CD21FD7CBB2002E3038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E7CD11FD7CBB2002E3038 /* ViewController.swift */; };
+		C77E7CD21FD7CBB2002E3038 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E7CD11FD7CBB2002E3038 /* AppListViewController.swift */; };
 		C77E7CD41FD7CBB2002E3038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77E7CD31FD7CBB2002E3038 /* Assets.xcassets */; };
 		C77E7CD71FD7CBB2002E3038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77E7CD51FD7CBB2002E3038 /* Main.storyboard */; };
 		C77E7CE31FD7CBB2002E3038 /* LaunchAppFromBundleIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E7CE21FD7CBB2002E3038 /* LaunchAppFromBundleIdentifierTests.swift */; };
@@ -50,11 +51,12 @@
 		39E9E2B60E70E01B25A82604 /* Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierUITests/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierUITests.release.xcconfig"; sourceTree = "<group>"; };
 		556861DFF7CAADCB48FB6DE2 /* Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.release.xcconfig"; sourceTree = "<group>"; };
 		580EB76BEE3EC863F0B291A3 /* Pods-LaunchAppFromBundleIdentifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchAppFromBundleIdentifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchAppFromBundleIdentifier/Pods-LaunchAppFromBundleIdentifier.release.xcconfig"; sourceTree = "<group>"; };
+		5DA30C8C201636CB00A578CD /* AppListItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItemCellView.swift; sourceTree = "<group>"; };
 		6E640F6724CA4A16EF8EF28A /* Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests/Pods-LaunchAppFromBundleIdentifier-LaunchAppFromBundleIdentifierTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2F76BAD42A6D262564FAED6 /* Pods-LaunchAppFromBundleIdentifierUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchAppFromBundleIdentifierUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchAppFromBundleIdentifierUITests/Pods-LaunchAppFromBundleIdentifierUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C77E7CCC1FD7CBB2002E3038 /* LaunchAppFromBundleIdentifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchAppFromBundleIdentifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77E7CCF1FD7CBB2002E3038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C77E7CD11FD7CBB2002E3038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C77E7CD11FD7CBB2002E3038 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 		C77E7CD31FD7CBB2002E3038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C77E7CD61FD7CBB2002E3038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C77E7CD81FD7CBB2002E3038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DA30C8B2016367D00A578CD /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C77E7CD51FD7CBB2002E3038 /* Main.storyboard */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		BC5972CFA858582892469A5D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +208,9 @@
 		C77E7CFD1FD7CD9F002E3038 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C77E7CD11FD7CBB2002E3038 /* ViewController.swift */,
-				C77E7CD51FD7CBB2002E3038 /* Main.storyboard */,
+				C77E7CD11FD7CBB2002E3038 /* AppListViewController.swift */,
+				5DA30C8C201636CB00A578CD /* AppListItemCellView.swift */,
+				5DA30C8B2016367D00A578CD /* Xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -528,7 +539,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C77E7CD21FD7CBB2002E3038 /* ViewController.swift in Sources */,
+				C77E7CD21FD7CBB2002E3038 /* AppListViewController.swift in Sources */,
+				5DA30C8D201636CB00A578CD /* AppListItemCellView.swift in Sources */,
 				C77E7CFF1FD7D115002E3038 /* AppListItems.swift in Sources */,
 				C77E7D031FD7DC82002E3038 /* AppListViewModel.swift in Sources */,
 				C77E7CD01FD7CBB2002E3038 /* AppDelegate.swift in Sources */,
