@@ -7,16 +7,12 @@
 //
 
 import Cocoa
+import RxSwift
 
-class AppListViewModel {
-    var items: [AppListItems.AppListItem]
+class AppListViewModel: NSObject {
+    @objc var items: [AppListItems.AppListItem]
     
     init(bundleIdentifiers: [String]) {
         self.items = AppListItems(bundleIdentifiers: bundleIdentifiers).items
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(didLaunchApplication(notification:)), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
-    }
-    
-    @objc func didLaunchApplication(notification: NSNotification)  {
-        
     }
 }
